@@ -38,7 +38,7 @@ def sub_directory(subdir):
 	docs =  os.path.join(subdir, "index")
 
 	html =  utils.convert_markdown(docs)
-	return render_template("layout.html", body=html)
+	return render_template("layout.html", body=html, doc='index')
 
 
 @app.route("/edit/<doc>.html", methods=['POST', 'GET'])
@@ -48,14 +48,14 @@ def edit(doc):
 		contents = request.form["contents"]
 
 		# write the new contents to file
-		with open(os.path.normpath("D:/Rohit/Projects/MDServe/docs/" + doc + ".md"), 'w') as f:
+		with open(os.path.normpath("../docs/" + doc + ".md"), 'w') as f:
 			f.write(contents)
 		# redirect to new file
 		return redirect(doc + '.html')
 	else:
 		# if they are getting the file
 		# load the raw md file
-		contents = open(os.path.normpath("D:/Rohit/Projects/MDServe/docs/" + doc + ".md")).read()
+		contents = open(os.path.normpath("../docs/" + doc + ".md")).read()
 		# give the edit template
 		return render_template("edit.html", doc=doc, contents=contents)
 
