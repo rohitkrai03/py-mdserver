@@ -12,10 +12,13 @@
 * Just download the package or clone the repo from github.
 * Run the mdserve.py file. A server will be started on port 5000.
 * Go to 
+
 > http://localhost:5000/
+
 * All the .md files which are in ../docs folder are converted into .html files and served on the server.
 * Click on the Edit link in the webpage and you will be redirected to an HTML form where you can edit the document.
-* If there is any directory inside of docs folder. Just type the directory name after the URL
+* If there is any directory inside of docs folder. Just type the directory name after the URL as follows: - 
+
 > http://localhost:5000/stuff/
 
 ### Example : -
