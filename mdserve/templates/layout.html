@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lame Blog!</title>
+</head>
+<body>
+
+<h1>Welcome To Lame Blog</p>
+
+<table>
+	<tr>
+		<td width='100%'>
+			{{ body | safe }}
+		</td>
+		<td>
+			<h3>Menu</h3>
+			<ol>
+				<li><a href="/">/</a></li>
+			</ol>
+		</td>
+	</tr>
+	<tr>
+		<td><a href="/edit/{{ doc }}.html">Edit This Document</a></td>
+	</tr>
+</table>
+
+</body>
+</html>
