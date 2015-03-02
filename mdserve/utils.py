@@ -5,7 +5,7 @@ import markdown
 
 def convert_markdown(doc):
 	# open the .md version of doc
-	contents = open(os.path.normpath("D:/Rohit/Projects/MDServe/docs/" + doc + ".md")).read()
+	contents = open(os.path.normpath("../docs/" + doc + ".md")).read()
 
 	# convert it to markdown
 	html = markdown.markdown(contents)
